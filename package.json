@@ -1,0 +1,32 @@
+{
+  "name": "react-native-bubble-tabbar",
+  "version": "0.0.1",
+  "description": "Bubble Tab Bar Component for React Native which supports React Navigation V5 and TypeScript",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
+  "repository": "https://github.com/junhoyeo/react-navigation-v5-bubble-tab-bar",
+  "authors": {
+    "name": "JunhoYeo",
+    "email": "hanaro0704@naver.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-native": "^0.62.2",
+    "styled-components": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.34",
+    "@types/styled-components": "^5.0.1",
+    "install-peers-cli": "^2.2.0",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@react-navigation/bottom-tabs": "^5.2.6"
+  }
+}

@@ -1,5 +1,5 @@
 # 🧼 react-native-bubble-tabbar
-> Bubble Tab Bar Component which supports React Navigation V5 and TypeScript
+> Bubble Tab Bar Component for React Native which supports React Navigation V5 and TypeScript
 
 **Warning: This is just specification yet; Will release it soon as possible!**
 
@@ -21,24 +21,24 @@ import {
 } from '@react-navigation/bottom-tabs';
 import {
   BubbleTabBar,
-  BubbleTabConfigProp,
+  IBubbleTabConfig,
 } from 'react-native-bubble-tabbar';
 
-const tabs: BubbleTabConfigProp[] = [
+const tabs: IBubbleTabConfig[] = [
   {
-    activeIconColor: '#cc0066',
+    activeColor: '#cc0066',
     activeBackgroundColor: '#f76a8c',
   },
   {
-    activeIconColor: '#ff6f5e',
+    activeColor: '#ff6f5e',
     activeBackgroundColor: '#f8dc88',
   },
   {
-    activeIconColor: '#1eb2a6',
+    activeColor: '#1eb2a6',
     activeBackgroundColor: '#ccf0e1',
   },
   {
-    activeIconColor: '#4d80e4',
+    activeColor: '#4d80e4',
     activeBackgroundColor: '#9aceff',
     name: 'Last',
     // Override the default RouteName by providing the `name` property
