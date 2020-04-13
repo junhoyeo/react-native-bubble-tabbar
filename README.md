@@ -1,7 +1,12 @@
 # 🧼 react-native-bubble-tabbar
 > Bubble Tab Bar Component for React Native which supports React Navigation V5 and TypeScript
 
-**Warning: This is just specification yet; Will release it soon as possible!**
+[![npm version](https://img.shields.io/npm/v/react-native-bubble-tabbar.svg?style=flat-square)](https://www.npmjs.org/package/react-native-bubble-tabbar)
+![weekly downloads](https://img.shields.io/npm/dw/react-native-bubble-tabbar?style=flat-square)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-native-bubble-tabbar?style=flat-square)
+![license](https://img.shields.io/npm/l/react-native-bubble-tabbar?style=flat-square)
+
+[![NPM](https://nodei.co/npm/react-native-bubble-tabbar.png)](https://nodei.co/npm/react-native-bubble-tabbar/)
 
 ## 📦 Installation
 
