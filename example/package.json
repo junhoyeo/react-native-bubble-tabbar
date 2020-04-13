@@ -1,0 +1,24 @@
+{
+  "name": "bubble-tabbar-example",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.34",
+    "@types/react-native": "^0.62.2",
+    "react": "16.11.0",
+    "react-native": "0.62.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "metro-react-native-babel-preset": "^0.58.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
