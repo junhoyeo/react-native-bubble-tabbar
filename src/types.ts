@@ -13,6 +13,7 @@ export type TBubbleTabBarIcon = string | IconDefinition | ImageSourcePropType;
 
 export interface IBubbleTabConfig {
   activeColor: string;
+  inactiveColor?: string;
   activeBackgroundColor: string;
   name?: string;
   activeIcon: TBubbleTabBarIcon;
@@ -21,7 +22,7 @@ export interface IBubbleTabConfig {
 
 export interface IIconRenderer {
   icon: TBubbleTabBarIcon;
-  activeColor?: string;
+  color?: string;
 }
 
 export type TIconRenderer = React.FC<IIconRenderer>;
