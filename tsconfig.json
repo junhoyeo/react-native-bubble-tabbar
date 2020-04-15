@@ -26,5 +26,6 @@
     "esm",
     "**/__tests__",
     "**/__test__",
+    "example",
   ]
 }
