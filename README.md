@@ -63,6 +63,8 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({
   );
 };
 
+const Tab = createBottomTabNavigator();
+
 const MainNavigator: React.FC = () => {
   return (
     <Tab.Navigator

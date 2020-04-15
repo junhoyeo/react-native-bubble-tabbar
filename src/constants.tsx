@@ -1,11 +1,14 @@
 import * as React from 'react';
+import { ImageSourcePropType } from 'react-native';
 import styled from 'styled-components/native';
 
 import { TIconRenderer } from './types';
 import { screenWidth } from './dimensions';
 
 export const defaultIconRenderer: TIconRenderer = ({ icon }) => {
-  if (typeof icon === 'string') {
+  const isImageSource = (icon: any): icon is ImageSourcePropType => icon;
+
+  if (!isImageSource(icon)) {
     return (null);
   }
 

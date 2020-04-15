@@ -1,3 +1,4 @@
+import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import * as React from 'react';
 import {
@@ -8,7 +9,7 @@ import {
   ImageSourcePropType,
 } from 'react-native';
 
-export type TBubbleTabBarIcon = string | ImageSourcePropType;
+export type TBubbleTabBarIcon = string | IconDefinition | ImageSourcePropType;
 
 export interface IBubbleTabConfig {
   activeColor: string;
