@@ -294,7 +294,7 @@ PODS:
     - React-cxxreact (= 0.62.2)
     - React-jsi (= 0.62.2)
     - ReactCommon/callinvoker (= 0.62.2)
-  - RNScreens (2.4.0):
+  - RNScreens (2.5.0):
     - React
   - RNSVG (12.1.0):
     - React
@@ -464,7 +464,7 @@ SPEC CHECKSUMS:
   React-RCTText: fae545b10cfdb3d247c36c56f61a94cfd6dba41d
   React-RCTVibration: 4356114dbcba4ce66991096e51a66e61eda51256
   ReactCommon: ed4e11d27609d571e7eee8b65548efc191116eb3
-  RNScreens: b5c0e1b2b04512919e78bd3898e144a157ce2363
+  RNScreens: ac02d0e4529f08ced69f5580d416f968a6ec3a1d
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   Yoga: 3ebccbdd559724312790e7742142d062476b698e
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a

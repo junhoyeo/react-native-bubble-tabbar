@@ -12,7 +12,10 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "strict": true,
-    "target": "es6"
+    "target": "es6",
+    "typeRoots": [
+      "@types"
+    ]
   },
   "exclude": [
     "node_modules",
