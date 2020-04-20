@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Animated, GestureResponderEvent } from 'react-native';
+import { useAnimation } from 'react-native-animation-hooks';
 import styled, { css } from 'styled-components/native';
 
 import {
@@ -41,63 +42,27 @@ const BubbleTab: React.FC<IBubbleTab> = ({
   accessibilityStates = [],
   testID,
 }) => {
-  const tabWidth = new Animated.Value(isActive ? activeTabSize : disabledTabSize);
-  const labelOpacity = new Animated.Value(isActive ? 1 : 0);
-  const labelWidth = new Animated.Value(isActive ? 50 : 0);
+  const [isOpenAnimation, setIsOpenAnimation] = useState(isActive);
 
-  const onTabOpen = () => {
-    // Animated
-    //   .parallel([
-    //     // @ts-ignore
-    //     Animated.timing(tabWidth, {
-    //       toValue: activeTabSize,
-    //       duration: 300,
-    //     }),
-    //     // @ts-ignore
-    //     Animated.timing(labelWidth, {
-    //       toValue: 50,
-    //       duration: 300,
-    //     }),
-    //     // @ts-ignore
-    //     Animated.timing(labelOpacity, {
-    //       toValue: 1,
-    //       duration: 150,
-    //       delay: 150,
-    //     }),
-    //   ])
-    //   .start();
-  };
+  const tabWidth = useAnimation({
+    type: 'timing',
+    initialValue: isActive ? activeTabSize : disabledTabSize,
+    toValue: isOpenAnimation ? activeTabSize : 75,
+    duration: 300,
+    useNativeDriver: false,
+  });
 
-  const onTabHide = () => {
-    // Animated
-    //   .parallel([
-    //     // @ts-ignore
-    //     Animated.timing(tabWidth, {
-    //       toValue: 75,
-    //       duration: 300,
-    //     }),
-    //     // @ts-ignore
-    //     Animated.timing(labelWidth, {
-    //       toValue: 0,
-    //       duration: 300,
-    //     }),
-    //     // @ts-ignore
-    //     Animated.timing(labelOpacity, {
-    //       toValue: 0,
-    //       duration: 100,
-    //     }),
-    //   ])
-    //   .start();
-  };
+  const labelOpacity = useAnimation({
+    type: 'timing',
+    initialValue: isActive ? 1 : 0,
+    toValue: isOpenAnimation ? 1 : 0,
+    duration: isOpenAnimation ? 150 : 100,
+    delay: isOpenAnimation ? 150 : 0,
+    useNativeDriver: true,
+  });
 
   useEffect(
-    () => {
-      if (!isActive) {
-        onTabHide();
-      } else {
-        onTabOpen();
-      }
-    },
+    () => setIsOpenAnimation(isActive),
     [isActive],
   );
 
@@ -116,6 +81,7 @@ const BubbleTab: React.FC<IBubbleTab> = ({
     >
       <AnimatedBubbleTabWrapper
         backgroundColor={backgroundColor}
+        style={{ width: tabWidth }}
       >
         {renderedIcon}
         {isActive && (

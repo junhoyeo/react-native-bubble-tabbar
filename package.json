@@ -28,7 +28,8 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@react-navigation/bottom-tabs": "^5.2.6"
+    "@react-navigation/bottom-tabs": "^5.2.6",
+    "react-native-animation-hooks": "^1.0.1"
   },
   "files": [
     "lib",

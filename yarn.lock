@@ -140,6 +140,11 @@ react-is@^16.7.0:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-native-animation-hooks@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/react-native-animation-hooks/-/react-native-animation-hooks-1.0.1.tgz#fcda58867d708084cc63c6fcd001f5375a40f45b"
+  integrity sha512-s1o71m9sPpEYwFpHTdBouO50jzvyxIVB4MmNwfVGgPWkdL02zKOzyXcNuPJmoCuLIstUj5TBEwtnGk1WMFJx5A==
+
 react-native-iphone-x-helper@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
