@@ -1,6 +1,8 @@
 # 🧼 react-native-bubble-tabbar
 > Bubble Tab Bar Component for React Native which supports React Navigation V5 and TypeScript
 
+<img alt="showcase about how it works" src="./docs/images/showcase.gif" width="512px">
+
 [![npm version](https://img.shields.io/npm/v/react-native-bubble-tabbar.svg?style=flat-square)](https://www.npmjs.org/package/react-native-bubble-tabbar)
 ![weekly downloads](https://img.shields.io/npm/dw/react-native-bubble-tabbar?style=flat-square)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-native-bubble-tabbar?style=flat-square)
@@ -58,7 +60,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({
       state={state}
       descriptors={descriptors}
       navigation={navigation}
-      tags={tabs}
+      tabs={tabs}
     />
   );
 };
