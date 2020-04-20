@@ -4,9 +4,13 @@ import {
   faCommentAlt,
   faBars,
 } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import BubbleTabBar, { IBubbleTabConfig } from 'react-native-bubble-tabbar';
+import BubbleTabBar, {
+  IBubbleTabConfig,
+  IIconRenderer,
+} from 'react-native-bubble-tabbar';
 
 const tabs: IBubbleTabConfig[] = [
   {
@@ -32,6 +36,13 @@ const tabs: IBubbleTabConfig[] = [
   },
 ];
 
+const fontAwesomeIconRenderer = ({ icon, color }: IIconRenderer) =>
+  <FontAwesomeIcon
+    icon={icon}
+    color={color}
+    size={18}
+  />;
+
 const CustomTabBar: React.FC<BottomTabBarProps> = ({
   state, descriptors, navigation,
 }) => {
@@ -41,6 +52,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({
       descriptors={descriptors}
       navigation={navigation}
       tabs={tabs}
+      iconRenderer={fontAwesomeIconRenderer}
     />
   );
 };

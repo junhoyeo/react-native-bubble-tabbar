@@ -5,8 +5,13 @@ import {
 } from '@react-navigation/bottom-tabs';
 import React from 'react';
 
-import CustomTabBar from './CustomTabBar';
-import { DummyScreen } from './screens';
+import CustomTabBar from './CustomTabBar.tsx';
+import DummyScreen, {
+  DummyScreenOne,
+  DummyScreenTwo,
+  DummyScreenThree,
+  DummyScreenFour,
+} from './screens.tsx';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,6 +19,7 @@ const MainNavigator: React.FC = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
+        initialRouteName="One"
         tabBar={({ state, descriptors, navigation }: BottomTabBarProps) =>
           <CustomTabBar
             state={state}
@@ -22,10 +28,10 @@ const MainNavigator: React.FC = () => {
           />
         }
       >
-        <Tab.Screen name="One" component={DummyScreen} />
-        <Tab.Screen name="Two" component={DummyScreen} />
-        <Tab.Screen name="Three" component={DummyScreen} />
-        <Tab.Screen name="Four" component={DummyScreen} />
+        <Tab.Screen name="One" component={DummyScreenOne} />
+        <Tab.Screen name="Two" component={DummyScreenTwo} />
+        <Tab.Screen name="Three" component={DummyScreenThree} />
+        <Tab.Screen name="Four" component={DummyScreenFour} />
         <Tab.Screen
           name="ThisRouteDoesNotShowBecauseOnlyFourAreInTabs"
           component={DummyScreen}
