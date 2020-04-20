@@ -7,7 +7,7 @@ import {
   IBubbleTabConfig,
   TIconRenderer,
   TBubbleTabBarIcon,
-} from './types.ts';
+} from './types';
 
 interface IBubbleTabParent extends
   Omit<IBubbleTabConfig, 'name' | 'activeIcon'>, IAccessibility {}
@@ -46,48 +46,48 @@ const BubbleTab: React.FC<IBubbleTab> = ({
   const labelWidth = new Animated.Value(isActive ? 50 : 0);
 
   const onTabOpen = () => {
-    Animated
-      .parallel([
-        Animated.timing(tabWidth, {
-          toValue: activeTabSize,
-          duration: 300,
-          useNativeDriver: false,
-        }),
-        Animated.timing(labelWidth, {
-          toValue: 50,
-          duration: 300,
-          useNativeDriver: false,
-        }),
-        Animated.timing(labelOpacity, {
-          toValue: 1,
-          duration: 150,
-          delay: 150,
-          useNativeDriver: true,
-        }),
-      ])
-      .start();
+    // Animated
+    //   .parallel([
+    //     // @ts-ignore
+    //     Animated.timing(tabWidth, {
+    //       toValue: activeTabSize,
+    //       duration: 300,
+    //     }),
+    //     // @ts-ignore
+    //     Animated.timing(labelWidth, {
+    //       toValue: 50,
+    //       duration: 300,
+    //     }),
+    //     // @ts-ignore
+    //     Animated.timing(labelOpacity, {
+    //       toValue: 1,
+    //       duration: 150,
+    //       delay: 150,
+    //     }),
+    //   ])
+    //   .start();
   };
 
   const onTabHide = () => {
-    Animated
-      .parallel([
-        Animated.timing(tabWidth, {
-          toValue: 75,
-          duration: 300,
-          useNativeDriver: false,
-        }),
-        Animated.timing(labelWidth, {
-          toValue: 0,
-          duration: 300,
-          useNativeDriver: false,
-        }),
-        Animated.timing(labelOpacity, {
-          toValue: 0,
-          duration: 100,
-          useNativeDriver: true,
-        }),
-      ])
-      .start();
+    // Animated
+    //   .parallel([
+    //     // @ts-ignore
+    //     Animated.timing(tabWidth, {
+    //       toValue: 75,
+    //       duration: 300,
+    //     }),
+    //     // @ts-ignore
+    //     Animated.timing(labelWidth, {
+    //       toValue: 0,
+    //       duration: 300,
+    //     }),
+    //     // @ts-ignore
+    //     Animated.timing(labelOpacity, {
+    //       toValue: 0,
+    //       duration: 100,
+    //     }),
+    //   ])
+    //   .start();
   };
 
   useEffect(
@@ -116,7 +116,6 @@ const BubbleTab: React.FC<IBubbleTab> = ({
     >
       <AnimatedBubbleTabWrapper
         backgroundColor={backgroundColor}
-        style={{ width: tabWidth }}
       >
         {renderedIcon}
         {isActive && (
