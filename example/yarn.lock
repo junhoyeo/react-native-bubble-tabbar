@@ -3735,12 +3735,18 @@ react-is@^16.12.0, react-is@^16.13.0, react-is@^16.7.0, react-is@^16.8.1, react-
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-native-bubble-tabbar@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.npmjs.org/react-native-bubble-tabbar/-/react-native-bubble-tabbar-0.0.8.tgz#d68259832f5cd6492f4dfc6379d78f9d89757854"
-  integrity sha512-Ef5rJKsx59QWarQsG1lflyQznc7Di2V6iTer0T+ERjcNAwPPmfxeDj39BAwusu5Ve4joJ3dfcHjhxbCUiBBV0g==
+react-native-animation-hooks@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/react-native-animation-hooks/-/react-native-animation-hooks-1.0.1.tgz#fcda58867d708084cc63c6fcd001f5375a40f45b"
+  integrity sha512-s1o71m9sPpEYwFpHTdBouO50jzvyxIVB4MmNwfVGgPWkdL02zKOzyXcNuPJmoCuLIstUj5TBEwtnGk1WMFJx5A==
+
+react-native-bubble-tabbar@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.npmjs.org/react-native-bubble-tabbar/-/react-native-bubble-tabbar-0.0.9.tgz#12e460f62fc6e9f67d1f4526014ebe7800beee02"
+  integrity sha512-Qe8aJK3uxUWEQVIm2pOtkBxPxt1Dvebu7lu0q9A/nDwKrNZZM1uMIPdltMrjG/ngSBsL/IPyZssn331jjNYYHA==
   dependencies:
     "@react-navigation/bottom-tabs" "^5.2.6"
+    react-native-animation-hooks "^1.0.1"
 
 react-native-iphone-x-helper@^1.2.1:
   version "1.2.1"
