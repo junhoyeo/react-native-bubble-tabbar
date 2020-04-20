@@ -2,8 +2,8 @@ import * as React from 'react';
 import { ImageSourcePropType } from 'react-native';
 import styled from 'styled-components/native';
 
-import { TIconRenderer } from './types';
-import { screenWidth } from './dimensions';
+import { TIconRenderer } from './types.ts';
+import { screenWidth } from './dimensions.ts';
 
 export const defaultIconRenderer: TIconRenderer = ({ icon }) => {
   const isImageSource = (icon: any): icon is ImageSourcePropType => icon;
@@ -26,6 +26,6 @@ const Icon = styled.Image.attrs({
 
 export const defaultActiveTabSize = (screenWidth - 50) / 3.8;
 
-export const defaultDisabledTabSize = 75;
+export const defaultDisabledTabSize = 85;
 
 export const defaultBackgroundColor = 'white';
