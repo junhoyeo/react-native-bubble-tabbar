@@ -3,7 +3,7 @@ import { AccessibilityStates } from 'react-native';
 import styled, { css } from 'styled-components/native';
 
 import BubbleTab from './BubbleTab';
-import { IBubbleTabBar, IRoute } from './types.ts';
+import { IBubbleTabBar, IRoute } from './types';
 
 import {
   defaultIconRenderer,

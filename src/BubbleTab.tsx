@@ -7,7 +7,7 @@ import {
   IBubbleTabConfig,
   TIconRenderer,
   TBubbleTabBarIcon,
-} from './types.ts';
+} from './types';
 
 interface IBubbleTabParent extends
   Omit<IBubbleTabConfig, 'name' | 'activeIcon'>, IAccessibility {}
