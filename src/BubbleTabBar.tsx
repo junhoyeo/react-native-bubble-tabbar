@@ -3,7 +3,7 @@ import { AccessibilityStates } from 'react-native';
 import styled, { css } from 'styled-components/native';
 
 import BubbleTab from './BubbleTab';
-import { IBubbleTabBar, IRoute } from './types';
+import { IBubbleTabBar, IRoute } from './types.ts';
 
 import {
   defaultIconRenderer,
@@ -55,11 +55,9 @@ const BubbleTabBar: React.FC<IBubbleTabBar> = ({
         const tabName = useMemo(
           () => {
             return name ||
-              optionTabBarLabel !== undefined
-                ? optionTabBarLabel
-                : optionTitle !== undefined
-                ? optionTitle
-                : routeName;
+              optionTabBarLabel ||
+              optionTitle ||
+              routeName;
           },
           [name, optionTabBarLabel, optionTitle],
         );
@@ -99,6 +97,7 @@ const BubbleTabBar: React.FC<IBubbleTabBar> = ({
 
         return (
           <BubbleTab
+            key={`tab-${tabName}`}
             iconRenderer={iconRenderer}
             activeTabSize={activeTabSize}
             disabledTabSize={disabledTabSize}

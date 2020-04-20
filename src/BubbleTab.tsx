@@ -7,7 +7,7 @@ import {
   IBubbleTabConfig,
   TIconRenderer,
   TBubbleTabBarIcon,
-} from './types';
+} from './types.ts';
 
 interface IBubbleTabParent extends
   Omit<IBubbleTabConfig, 'name' | 'activeIcon'>, IAccessibility {}
@@ -31,7 +31,7 @@ const BubbleTab: React.FC<IBubbleTab> = ({
   tabName,
   icon,
   activeColor,
-  inactiveColor = '#e7e7e7',
+  inactiveColor = '#e0e0e0',
   activeBackgroundColor,
   isActive,
   onPress,
@@ -118,13 +118,15 @@ const BubbleTab: React.FC<IBubbleTab> = ({
         backgroundColor={backgroundColor}
       >
         {renderedIcon}
-        <BubbleTabLabel
-          numberOfLines={1}
-          color={color}
-          style={{ opacity: labelOpacity }}
-        >
-          {tabName}
-        </BubbleTabLabel>
+        {isActive && (
+          <BubbleTabLabel
+            numberOfLines={1}
+            color={color}
+            style={{ opacity: labelOpacity }}
+          >
+            {tabName}
+          </BubbleTabLabel>
+        )}
       </AnimatedBubbleTabWrapper>
     </TouchableBubbleTabContainer>
   );
@@ -146,7 +148,7 @@ const AnimatedBubbleTabWrapper = styled(Animated.View)<IAnimatedBubbleTabWrapper
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 10px 18px;
   border-radius: 20px;
 
   ${({ backgroundColor }) => backgroundColor && css`
@@ -159,8 +161,8 @@ interface IBubbleTabLabel {
 }
 
 const BubbleTabLabel = styled(Animated.Text)<IBubbleTabLabel>`
-  margin-left: 5px;
-  font-size: 12px;
+  margin-left: 10px;
+  font-size: 14.5px;
   width: auto;
   height: auto;
   font-weight: bold;
