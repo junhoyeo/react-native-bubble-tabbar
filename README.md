@@ -5,16 +5,16 @@
   <img alt="cover with mockup" src="./docs/images/cover.png" width="512px">
   <br />
   <a href="https://www.npmjs.org/package/react-native-bubble-tabbar">
-    <img alt="npm version" src="https://img.shields.io/npm/v/react-native-bubble-tabbar.svg?style=flat-square" />
+    <img alt="npm version" src="https://img.shields.io/npm/v/react-native-bubble-tabbar.svg?style=for-the-badge" />
   </a>
   <a href="https://www.npmjs.org/package/react-native-bubble-tabbar">
-    <img alt="weekly downloads" src="https://img.shields.io/npm/dw/react-native-bubble-tabbar.svg?style=flat-square" />
+    <img alt="weekly downloads" src="https://img.shields.io/npm/dw/react-native-bubble-tabbar.svg?style=for-the-badge" />
   </a>
   <a href="https://www.npmjs.org/package/react-native-bubble-tabbar">
-    <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/react-native-bubble-tabbar.svg?style=flat-square" />
+    <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/react-native-bubble-tabbar.svg?style=for-the-badge" />
   </a>
   <a href="./LICENSE">
-    <img alit="license" src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" />
+    <img alt="license" src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" />
   </a>
   <br />
   <a href="https://nodei.co/npm/react-native-bubble-tabbar/">
