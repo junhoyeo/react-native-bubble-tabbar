@@ -6,7 +6,7 @@
   "types": "lib/index.d.ts",
   "typings": "lib/index.d.ts",
   "repository": "https://github.com/junhoyeo/react-navigation-v5-bubble-tab-bar",
-  "authors": {
+  "author": {
     "name": "JunhoYeo",
     "email": "hanaro0704@naver.com"
   },
