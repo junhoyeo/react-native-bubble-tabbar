@@ -5,13 +5,13 @@ import {
 } from '@react-navigation/bottom-tabs';
 import React from 'react';
 
-import CustomTabBar from './CustomTabBar.tsx';
+import CustomTabBar from './CustomTabBar';
 import DummyScreen, {
   DummyScreenOne,
   DummyScreenTwo,
   DummyScreenThree,
   DummyScreenFour,
-} from './screens.tsx';
+} from './screens';
 
 const Tab = createBottomTabNavigator();
 

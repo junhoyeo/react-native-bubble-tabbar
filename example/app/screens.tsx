@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Text } from 'react-native';
 import styled, { css } from 'styled-components/native';
 
 interface IContainer {

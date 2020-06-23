@@ -4,7 +4,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SafeAreaView from 'react-native-safe-area-view';
 import styled from 'styled-components/native';
 
-import Navigator from './Navigator.tsx';
+import Navigator from './Navigator';
 
 const App: React.FC = () => {
   return (
