@@ -31,10 +31,20 @@
 ## 📦 Installation
 
 ```bash
+npm install react react-native styled-components
+# Or using yarn
+yarn add react react-native styled-components
+```
+
+First, you should install peerdependencies as the command above. You might already installed react and react-native. If you're using TypeScript, it is recommended to install the typings for the each package, too.
+
+```bash
 npm install react-native-bubble-tabbar
 # Or using yarn
 yarn add react-native-bubble-tabbar
 ```
+
+Finally, install this module and you're ready to go! 🎉
 
 ## 🐋 Usage
 
