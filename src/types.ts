@@ -3,7 +3,8 @@ import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import * as React from 'react';
 import {
   AccessibilityRole,
-  AccessibilityStates,
+  AccessibilityState,
+  Animated,
   StyleProp,
   ViewStyle,
   ImageSourcePropType,
@@ -33,7 +34,7 @@ export interface IBubbleTabBar extends BottomTabBarProps {
   activeTabSize?: number;
   disabledTabSize?: number;
   backgroundColor?: string;
-  style?: StyleProp<ViewStyle>;
+  style?: Animated.WithAnimatedValue<StyleProp<ViewStyle>>;
 }
 
 export interface IRoute {
@@ -43,6 +44,6 @@ export interface IRoute {
 
 export interface IAccessibility {
   accessibilityRole?: AccessibilityRole;
-  accessibilityStates?: AccessibilityStates[];
+  accessibilityState?: AccessibilityState;
   accessibilityLabel?: string;
 }

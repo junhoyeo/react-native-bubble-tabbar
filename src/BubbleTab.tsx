@@ -39,7 +39,7 @@ const BubbleTab: React.FC<IBubbleTab> = ({
   onLongPress,
   accessibilityRole,
   accessibilityLabel,
-  accessibilityStates = [],
+  accessibilityState,
   testID,
 }) => {
   const [isOpenAnimation, setIsOpenAnimation] = useState(isActive);
@@ -75,7 +75,7 @@ const BubbleTab: React.FC<IBubbleTab> = ({
       onPress={onPress}
       onLongPress={onLongPress}
       accessibilityRole={accessibilityRole}
-      accessibilityStates={accessibilityStates}
+      accessibilityState={accessibilityState}
       accessibilityLabel={accessibilityLabel}
       testID={testID}
     >

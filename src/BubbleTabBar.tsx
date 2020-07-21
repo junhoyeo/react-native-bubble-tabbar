@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from 'react';
-import { AccessibilityStates } from 'react-native';
+import { AccessibilityState } from 'react-native';
 import styled, { css } from 'styled-components/native';
 
 import BubbleTab from './BubbleTab';
@@ -88,8 +88,7 @@ const BubbleTabBar: React.FC<IBubbleTabBar> = ({
           [routeKey],
         );
 
-        const accessibilityStates =
-          (isActive ? ['selected'] : []) as AccessibilityStates[];
+        const accessibilityState = { selected: isActive };
         const currentIcon =
           disabledIcon ?
             isActive ? activeIcon : disabledIcon
@@ -109,7 +108,7 @@ const BubbleTabBar: React.FC<IBubbleTabBar> = ({
             onPress={onPress}
             onLongPress={onLongPress}
             accessibilityRole="button"
-            accessibilityStates={accessibilityStates}
+            accessibilityState={accessibilityState}
             accessibilityLabel={accessibilityLabel}
           />
         );
