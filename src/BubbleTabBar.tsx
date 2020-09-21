@@ -42,6 +42,7 @@ const BubbleTabBar: React.FC<IBubbleTabBar> = ({
           name,
           activeColor,
           activeBackgroundColor,
+          inactiveColor,
           activeIcon,
           disabledIcon,
         } = currentTabConfig;
@@ -104,6 +105,7 @@ const BubbleTabBar: React.FC<IBubbleTabBar> = ({
             icon={currentIcon}
             activeColor={activeColor}
             activeBackgroundColor={activeBackgroundColor}
+            inactiveColor={inactiveColor}
             tabName={tabName}
             onPress={onPress}
             onLongPress={onLongPress}
