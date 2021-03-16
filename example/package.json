@@ -8,28 +8,28 @@
     "start": "react-native start"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "@fortawesome/react-native-fontawesome": "^0.2.5",
-    "@react-navigation/bottom-tabs": "^5.7.2",
-    "@react-navigation/native": "^5.7.1",
-    "@types/react": "^16.9.43",
-    "@types/react-native": "^0.63.1",
-    "react": "16.13.1",
-    "react-native": "0.63.1",
-    "react-native-bubble-tabbar": "^0.0.9",
-    "react-native-safe-area-context": "^3.1.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-native-fontawesome": "^0.2.6",
+    "@react-navigation/bottom-tabs": "^5.10.0",
+    "@react-navigation/native": "^5.8.0",
+    "@types/react": "^16.9.54",
+    "@types/react-native": "^0.63.30",
+    "react": "17.0.1",
+    "react-native": "0.63.3",
+    "react-native-bubble-tabbar": "^0.0.11",
+    "react-native-safe-area-context": "^3.1.8",
     "react-native-safe-area-view": "^1.1.1",
-    "react-native-screens": "^2.9.0",
+    "react-native-screens": "^2.12.0",
     "react-native-svg": "^12.1.0",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/runtime": "^7.10.5",
-    "@types/styled-components": "^5.1.1",
-    "metro-react-native-babel-preset": "^0.61.0",
-    "tslib": "^2.0.0"
+    "@babel/core": "^7.12.3",
+    "@babel/runtime": "^7.12.1",
+    "@types/styled-components": "^5.1.4",
+    "metro-react-native-babel-preset": "^0.63.0",
+    "tslib": "^2.0.3"
   },
   "jest": {
     "preset": "react-native"

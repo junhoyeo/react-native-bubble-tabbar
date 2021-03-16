@@ -49,36 +49,50 @@ Finally, install this module and you're ready to go! 🎉
 ## 🐋 Usage
 
 ```tsx
+import {
+  faHome,
+  faHeart,
+  faCommentAlt,
+  faBars,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import {
-  BottomTabBarProps,
-  createBottomTabNavigator,
-} from '@react-navigation/bottom-tabs';
-import {
-  BubbleTabBar,
+import BubbleTabBar, {
   IBubbleTabConfig,
+  IIconRenderer,
 } from 'react-native-bubble-tabbar';
 
 const tabs: IBubbleTabConfig[] = [
   {
     activeColor: '#cc0066',
     activeBackgroundColor: '#f76a8c',
+    activeIcon: faHome,
   },
   {
     activeColor: '#ff6f5e',
     activeBackgroundColor: '#f8dc88',
+    activeIcon: faHeart,
   },
   {
     activeColor: '#1eb2a6',
     activeBackgroundColor: '#ccf0e1',
+    activeIcon: faCommentAlt,
   },
   {
     activeColor: '#4d80e4',
     activeBackgroundColor: '#9aceff',
+    activeIcon: faBars,
     name: 'Last',
-    // Override the default RouteName by providing the `name` property
   },
 ];
+
+const fontAwesomeIconRenderer = ({ icon, color }: IIconRenderer) =>
+  <FontAwesomeIcon
+    icon={icon}
+    color={color}
+    size={18}
+  />;
 
 const CustomTabBar: React.FC<BottomTabBarProps> = ({
   state, descriptors, navigation,
@@ -89,6 +103,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({
       descriptors={descriptors}
       navigation={navigation}
       tabs={tabs}
+      iconRenderer={fontAwesomeIconRenderer}
     />
   );
 };
@@ -111,10 +126,86 @@ const MainNavigator: React.FC = () => {
       <Tab.Screen name="Three" component={ScreenThree} />
       <Tab.Screen name="Four" component={ScreenFour} />
       <Tab.Screen
-        name="ThisRouteDoesNotShowBecauseOnlyFourAreInTabs"
+        name="ThisRouteDoesNotShowBecauseOnlyFourObjectsAreInTabs"
         component={ScreenHiddenFromTabBar}
       />
     </Tab.Navigator>
   );
 };
 ```
+
+## ✔️ tabs Props
+
+### `name`
+
+Override prop **name** on <Tab.Screen /> component
+
+| Type | Required |
+| ---- | -------- |
+| string | No     |
+
+---
+
+### `activeColor`
+
+Color for active tab text and icon
+
+| Type | Required |
+| ---- | -------- |
+| string | Yes    |
+
+---
+
+### `activeBackgroundColor`
+
+BackgroundColor for active tab
+
+| Type | Required |
+| ---- | -------- |
+| string | Yes    |
+
+---
+
+### `inactiveColor`
+
+Color & background color for inactive tab
+
+| Type | Required |
+| ---- | -------- |
+| string | No    |
+
+---
+
+### `activeIcon`
+
+Icon name for active tab
+
+| Type | Required |
+| ---- | -------- |
+| string | No     |
+
+---
+
+### `disabledIcon`
+
+Icon name for inactive tab
+
+| Type | Required |
+| ---- | -------- |
+| string | No    |
+
+---
+
+## ✔️ iconRenderer Props
+
+Function with params
+
+### `icon`
+
+Icon name to pass on Icon Component
+
+---
+
+### `color`
+
+Icon color to pass on Icon Component
