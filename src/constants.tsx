@@ -9,12 +9,10 @@ export const defaultIconRenderer: TIconRenderer = ({ icon }: IIconRenderer) => {
   const isImageSource = (icon: any): icon is ImageSourcePropType => icon;
 
   if (!isImageSource(icon)) {
-    return (null);
+    return null;
   }
 
-  return (
-    <Icon source={icon} />
-  );
+  return <Icon source={icon} />;
 };
 
 const Icon = styled.Image.attrs({

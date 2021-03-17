@@ -10,11 +10,12 @@ import {
   TBubbleTabBarIcon,
 } from './types';
 
-interface IBubbleTabParent extends
-  Omit<IBubbleTabConfig, 'name' | 'activeIcon'>, IAccessibility {}
+interface IBubbleTabParent
+  extends Omit<IBubbleTabConfig, 'name' | 'activeIcon'>,
+    IAccessibility {}
 
 export interface IBubbleTab extends IBubbleTabParent {
-  iconRenderer: TIconRenderer,
+  iconRenderer: TIconRenderer;
   activeTabSize: number;
   disabledTabSize: number;
   tabName: string;
@@ -61,10 +62,7 @@ const BubbleTab: React.FC<IBubbleTab> = ({
     useNativeDriver: true,
   });
 
-  useEffect(
-    () => setIsOpenAnimation(isActive),
-    [isActive],
-  );
+  useEffect(() => setIsOpenAnimation(isActive), [isActive]);
 
   const color = isActive ? activeColor : inactiveColor;
   const backgroundColor = isActive ? activeBackgroundColor : 'transparent';
@@ -109,7 +107,9 @@ interface IAnimatedBubbleTabWrapper {
   backgroundColor: string;
 }
 
-const AnimatedBubbleTabWrapper = styled(Animated.View)<IAnimatedBubbleTabWrapper>`
+const AnimatedBubbleTabWrapper = styled(
+  Animated.View,
+)<IAnimatedBubbleTabWrapper>`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -117,9 +117,11 @@ const AnimatedBubbleTabWrapper = styled(Animated.View)<IAnimatedBubbleTabWrapper
   padding: 10px 18px;
   border-radius: 20px;
 
-  ${({ backgroundColor }) => backgroundColor && css`
-    background-color: ${backgroundColor};
-  `};
+  ${({ backgroundColor }) =>
+    backgroundColor &&
+    css`
+      background-color: ${backgroundColor};
+    `};
 `;
 
 interface IBubbleTabLabel {
@@ -133,7 +135,9 @@ const BubbleTabLabel = styled(Animated.Text)<IBubbleTabLabel>`
   height: auto;
   font-weight: bold;
 
-  ${({ color }) => color && css`
-    color: ${color};
-  `};
+  ${({ color }) =>
+    color &&
+    css`
+      color: ${color};
+    `};
 `;
