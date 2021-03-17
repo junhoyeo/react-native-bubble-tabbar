@@ -4,7 +4,6 @@ import * as React from 'react';
 import {
   AccessibilityRole,
   AccessibilityState,
-  Animated,
   StyleProp,
   ViewStyle,
   ImageSourcePropType,
@@ -34,7 +33,7 @@ export interface IBubbleTabBar extends BottomTabBarProps {
   activeTabSize?: number;
   disabledTabSize?: number;
   backgroundColor?: string;
-  style?: Animated.WithAnimatedValue<StyleProp<ViewStyle>>;
+  style?: StyleProp<ViewStyle>;
 }
 
 export interface IRoute {
