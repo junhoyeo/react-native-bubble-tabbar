@@ -25,7 +25,7 @@ const BubbleTabBar: React.FC<IBubbleTabBar> = ({
 }) => {
   const tabRoutes = useMemo(() => {
     const { routes } = state;
-    return routes.slice(0, 4);
+    return routes.slice(0, tabs.length);
   }, [state.routes]);
 
   return (
