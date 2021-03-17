@@ -15,21 +15,22 @@
     "build": "tsc"
   },
   "peerDependencies": {
-    "react": "^16.13.1",
-    "react-native": "^0.63.1",
-    "styled-components": "^5.1.1"
+    "react": "^17.0.1",
+    "react-native": "^0.64.0",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-common-types": "^0.2.30",
-    "@types/react": "^16.9.43",
-    "@types/react-native": "^0.63.1",
-    "@types/styled-components": "^5.1.1",
+    "@fortawesome/fontawesome-common-types": "^0.2.35",
+    "@types/react": "^17.0.3",
+    "@types/react-native": "^0.63.52",
+    "@types/styled-components": "^5.1.9",
     "install-peers-cli": "^2.2.0",
-    "tslib": "^2.0.0",
-    "typescript": "^3.9.7"
+    "tslib": "^2.1.0",
+    "typescript": "^4.2.3"
   },
   "dependencies": {
-    "@react-navigation/bottom-tabs": "^5.7.2",
+    "@react-navigation/bottom-tabs": "^5.11.8",
+    "@types/styled-components-react-native": "^5.1.1",
     "react-native-animation-hooks": "^1.0.1"
   },
   "files": [
